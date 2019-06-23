@@ -41,9 +41,18 @@ public class Funcionario extends Pessoa{
         this.cargo = cargo;
     }
     
+    public Funcionario(){
+       super();
+       super.setIdPessoa(0);
+       super.setCpf(cargo);
+       super.setEndereco(cargo);
+       super.setIdade(0);
+       super.setNome(cargo);
+       super.setTelefone(cargo);
+    }
     
     public void cadastrarFornecedor(){
-    
+         
     }
     
     public void cadastrarCliente(){

@@ -28,7 +28,7 @@ public class Cliente extends Pessoa{
     }
     
     
-    public void buscarUsuario(){
+    public void buscarUsuario(int idPessoa){
         
     }
     

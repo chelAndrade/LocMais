@@ -106,7 +106,7 @@ public class Fornecedor {
       
     }
     
-    public void excluirFornecedor(){
+    public void excluirFornecedor(int idFornecedor){
         
     }
     
