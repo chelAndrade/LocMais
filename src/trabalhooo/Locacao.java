@@ -45,7 +45,9 @@ public class Locacao {
     }
    
    public boolean alugar(){
+       System.out.println("lixo");
        return true;
+       
    }
    
    public boolean  devolver(){
