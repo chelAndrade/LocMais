@@ -36,7 +36,7 @@ public class FilmeTerror  extends Filme{
                 }
      }
       
-    public boolean disponAluguel(){
+    public boolean disponAluguel(int idFilme){
         return true;
     }
 }

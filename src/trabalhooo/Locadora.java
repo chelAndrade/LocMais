@@ -13,45 +13,22 @@ import java.util.ArrayList;
  */
 public class Locadora {
     private int quantFilmes;
-    private ArrayList<String> fornecedores = new ArrayList();
-    private ArrayList<String> filmes = new ArrayList();
-    private ArrayList<String> pessoas = new ArrayList();
+    private String fornecedor[];
+    private String filmes[];
+    private String pessoas[];
+    private int idPessoa;
+    private int idFornecedor;
+    private int idFilmes;
 
-    public boolean buscaFornecedor(String fornecedor){
-        String nome;
-        for (int i = 0; i < getFornecedores().size(); i++) {
-            nome = getFornecedores().get(i);
-            if(getFornecedores().get(i) == fornecedor) {
-                return true;  
-            }
-        }
-         return false;
-    }
     
-    public boolean buscaFilme(String filme){
-        String nome;
-        for (int i = 0; i < this.getFilmes().size(); i++) {
-            nome = this.getFilmes().get(i);  
-             if (this.getFilmes().get(i) == filme) {
-                return true;
-            }
-        }
-         return false;
-    }
-    
-    public boolean buscaPessoa(String pessoa){
-        for (int i = 0; i < getPessoas().size(); i++) {
-            if(this.getPessoas().get(i) == pessoa)
-                return true;  
-        }
-        return false;  
-    }
+  
     /**
      * @return the quantFilmes
      */
     public int getQuantFilmes() {
         return quantFilmes;
     }
+
     /**
      * @param quantFilmes the quantFilmes to set
      */
@@ -60,45 +37,97 @@ public class Locadora {
     }
 
     /**
-     * @return the fornecedores
+     * @return the fornecedor
      */
-    public ArrayList<String> getFornecedores() {
-        return fornecedores;
+    public String[] getFornecedor() {
+        return fornecedor;
     }
 
     /**
-     * @param fornecedores the fornecedores to set
+     * @param fornecedor the fornecedor to set
      */
-    public void setFornecedores(ArrayList<String> fornecedores) {
-        this.fornecedores = fornecedores;
+    public void setFornecedor(String[] fornecedor) {
+        this.fornecedor = fornecedor;
     }
 
     /**
      * @return the filmes
      */
-    public ArrayList<String> getFilmes() {
+    public String[] getFilmes() {
         return filmes;
     }
 
     /**
      * @param filmes the filmes to set
      */
-    public void setFilmes(ArrayList<String> filmes) {
+    public void setFilmes(String[] filmes) {
         this.filmes = filmes;
     }
 
     /**
      * @return the pessoas
      */
-    public ArrayList<String> getPessoas() {
+    public String[] getPessoas() {
         return pessoas;
     }
 
     /**
      * @param pessoas the pessoas to set
      */
-    public void setPessoas(ArrayList<String> pessoas) {
+    public void setPessoas(String[] pessoas) {
         this.pessoas = pessoas;
     }
     
+    
+    
+    public boolean buscaIdFornecedor(int idFornecedor){
+        //ArrayList<String> fornecedor = new ArrayList<String>();
+        //for(String fornecedorf : this.fornecedor){
+         for (int i = 0; i < this.fornecedor.length; i++) {
+            String string = this.fornecedor[i];
+            /*if (this.fornecedor  == this.idFornecedor) {
+                return this.fornecedor;  
+            }else{
+                return false;
+            }*/
+        }
+         return true;
+    }
+    
+    public boolean buscaIdFilmes(int idFilmes){
+         for (int i = 0; i < this.filmes.length; i++) {
+            String string = this.filmes[i];  
+             /*if (this.filmes == this.idFilmes) {
+                return this.filmes;
+            }else{
+                return false;
+             }*/
+        }
+         return true;
+    }
+    
+    public boolean buscaIdPessoa(int idPessoa){
+        for (int i = 0; i < pessoas.length; i++) {
+                String string = pessoas[i]; { 
+                    /*if (this.pessoas == this.idPessoa) {
+                        return this.pessoas;     
+                }else{
+                    return false;
+                }*/
+            }
+            
+        }
+        return true;
+    }
+    
+    public void alterarDados(){
+        
+    }
+    
+    public void excluirDados(){
+        
+    }
+    
+    
+  
 }

@@ -14,12 +14,27 @@ import java.util.Date;
  * @author michel,Christian 
  */
 public class Filme {
+     private int idFilme;
      private String titulo;
      private Date anoLancamento;
      private String classificacaoIndicativa;
      private int quantiDisponivel;
      private float valorAlocacao;
      private float valorCompra;
+
+    /**
+     * @return the idFilme
+     */
+    public int getIdFilme() {
+        return idFilme;
+    }
+
+    /**
+     * @param idFilme the idFilme to set
+     */
+    public void setIdFilme(int idFilme) {
+        this.idFilme = idFilme;
+    }
 
     /**
      * @return the titulo
@@ -104,11 +119,6 @@ public class Filme {
     public void setValorCompra(float valorCompra) {
         this.valorCompra = valorCompra;
     }
-     
-    
-     public void cadastrarFilme(int idFilme,String titulo,Date anoLancamento,String classificacaoIndicativa,int quantiDisponivel){
-         
-     }
      
      public void adicionarFilme(int idFilme,String titulo,Date anoLancamento,String classificacaoIndicativa,int quantiDisponivel){
      

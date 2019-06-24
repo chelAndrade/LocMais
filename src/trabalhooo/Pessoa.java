@@ -9,7 +9,7 @@ package trabalhooo;
  *
  * @author miche
  */
-public class Pessoa {
+public abstract class Pessoa  {
     private int idPessoa;
     private String nome;
     private String cpf;
@@ -108,4 +108,6 @@ public class Pessoa {
     public void excluirPessoa(int idPessoa,String nome, String cpf,String endereco, String telefone, int idade){
     
     }
+ 
+
 }
