@@ -101,7 +101,14 @@ public class Fornecedor {
         this.valorFilmes = valorFilmes;
     }
     
-    
+    public Fornecedor(String nomeFornecedor,int cnpj, String telefone, String endereco){
+        super();
+        this.nomeFornecedor = nomeFornecedor;
+        this.cnpj = cnpj;
+        this.telefone = telefone;
+        this.endereco = endereco;
+        
+    }
     public void alterarFornecedor(){
       
     }
