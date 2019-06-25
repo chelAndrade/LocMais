@@ -120,11 +120,41 @@ public class Filme {
         this.valorCompra = valorCompra;
     }
      
-     public void adicionarFilme(int idFilme,String titulo,Date anoLancamento,String classificacaoIndicativa,int quantiDisponivel){
-     
+    public Filme(int idFilme,String titulo,Date anoLancamento,String classificacaoIndicativa,int quantiDisponivel,float valorAlocacao, float valorCompra){
+        super();
+        this.idFilme = idFilme;
+        this.anoLancamento = anoLancamento;
+        this.classificacaoIndicativa = classificacaoIndicativa;
+        this.quantiDisponivel = quantiDisponivel;
+        this.titulo = titulo;
+        this.valorAlocacao = valorAlocacao;
+        this.valorCompra = valorCompra;
+        
+        
+    }
+     public void adicionarFilme(Filme filme){
+         int idFilme = filme.getIdFilme();
+         
+           try {
+                  filme.getIdFilme();
+                  filme.getTitulo();
+                  filme.getValorAlocacao();
+                  filme.getClassificacaoIndicativa();
+                  filme.getQuantiDisponivel();
+                  filme.getValorCompra();
+                  filme.getAnoLancamento();
+            
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
      }
      
-     public void excluirFilme(int idFilme,String titulo,Date anoLancamento,String classificacaoIndicativa,int quantiDisponivel){
+     public void excluirFilme(Filme filme){
+         try{
+            filme.getIdFilme();
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
      }
      
      public void editarFilme(int idFilme,String titulo,Date anoLancamento,String classificacaoIndicativa,int quantiDisponivel){
