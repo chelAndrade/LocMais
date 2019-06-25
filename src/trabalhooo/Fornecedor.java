@@ -101,20 +101,35 @@ public class Fornecedor {
         this.valorFilmes = valorFilmes;
     }
     
-    public Fornecedor(String nomeFornecedor,int cnpj, String telefone, String endereco){
+    public Fornecedor(int idFornecedor,String nomeFornecedor,int cnpj, String telefone, String endereco){
         super();
+        this.idFornecedor = idFornecedor;
         this.nomeFornecedor = nomeFornecedor;
         this.cnpj = cnpj;
         this.telefone = telefone;
         this.endereco = endereco;
         
     }
-    public void alterarFornecedor(){
-      
+    public void alterarFornecedor(Fornecedor fornecedor){
+       int idFornecedor = fornecedor.getIdFornecedor();
+       
+        try {
+            fornecedor.getCnpj();
+            fornecedor.getEndereco();
+            fornecedor.getNomeFornecedor();
+            fornecedor.getTelefone();
+            
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
     
-    public void excluirFornecedor(int idFornecedor){
-        
+    public void excluirFornecedor(Fornecedor fornecedor){
+        try{
+            fornecedor.getIdFornecedor();
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
     
     public boolean consultaFornecedor(){
