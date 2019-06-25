@@ -130,6 +130,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
         String nome = textField1.getText();
         //CadastroFuncionario cadastro = new CadastroFuncionario(nome);              
         JOptionPane.showMessageDialog(null, nome);
+        //JOptionPane.showMessageDialog(null, nome1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
