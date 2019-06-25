@@ -1,6 +1,8 @@
 package tela;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import trabalhooo.CadastroFuncionario;
 import trabalhooo.Funcionario;
 
@@ -126,7 +128,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String nome = textField1.getText();
-        CadastroFuncionario cadastro = new CadastroFuncionario(nome);              
+        //CadastroFuncionario cadastro = new CadastroFuncionario(nome);              
         JOptionPane.showMessageDialog(null, nome);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -163,6 +165,15 @@ public class TelaFornecedor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        JFrame frame = new JFrame("LocMais");
+        
+        JPanel painel = new JPanel();
+        
+         frame.getContentPane().add(painel);
+        
+        frame.setSize(400, 600);
+        frame.setVisible(true);
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaFornecedor().setVisible(true);

@@ -32,6 +32,8 @@
                           <Component id="label1" min="-2" pref="104" max="-2" attributes="0"/>
                           <Component id="label3" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="label4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label5" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="label6" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -39,6 +41,8 @@
                           <Component id="textField2" max="32767" attributes="0"/>
                           <Component id="textField4" alignment="0" pref="124" max="32767" attributes="0"/>
                           <Component id="textField3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="textField5" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="textField6" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -54,26 +58,40 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="label1" min="-2" max="-2" attributes="0"/>
-                  <Component id="textField1" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textField1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="textField2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textField3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textField4" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label5" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="textField5" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="label6" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="textField6" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="textField2" min="-2" max="-2" attributes="0"/>
-                  <Component id="label2" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="label3" min="-2" max="-2" attributes="0"/>
-                  <Component id="textField3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="label4" min="-2" max="-2" attributes="0"/>
-                  <Component id="textField4" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="185" max="32767" attributes="0"/>
+              <EmptySpace pref="113" max="32767" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
           </Group>
@@ -124,12 +142,32 @@
     </Component>
     <Component class="java.awt.Label" name="label4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="CNPJ"/>
+        <Property name="text" type="java.lang.String" value="Cpf"/>
       </Properties>
     </Component>
     <Component class="java.awt.TextField" name="textField4">
       <Properties>
         <Property name="text" type="java.lang.String" value="textField4"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Label" name="label5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salario"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.TextField" name="textField5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="textField5"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Label" name="label6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cargo"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.TextField" name="textField6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="textField6"/>
       </Properties>
     </Component>
   </SubComponents>
