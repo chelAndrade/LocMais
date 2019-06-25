@@ -2,7 +2,7 @@
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import trabalhooo.AcaoBotao;
+import Acao.AcaoBotao;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
