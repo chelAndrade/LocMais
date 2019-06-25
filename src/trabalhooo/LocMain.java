@@ -11,7 +11,7 @@ package trabalhooo;
  */
 public class LocMain {
     public static void main(String[] args) {
-       System.out.println("ola mundo");
+       //System.out.println("ola mundo");
        /*Filme acao = new FilmeAcao();
        acao.setAnoLancamento((12/01/2011));
        acao.setClassificacaoIndicativa("14");
@@ -43,7 +43,7 @@ public class LocMain {
        adulto.setAnoLancamento((29/06/1999));
        adulto.setClassificacaoIndicativa("18");
        adulto.setQuantiDisponivel(4);
-       adulto.setTitulo("As Brasileirinhas");
+       adulto.setTitulo("Brasileirinhas");
        adulto.setValorAlocacao(4.4f);
        adulto.setValorCompra(3.0f);
        
