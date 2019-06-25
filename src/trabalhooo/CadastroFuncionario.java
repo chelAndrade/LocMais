@@ -13,12 +13,24 @@ public class CadastroFuncionario {
 
     Funcionario funcionario;    
     
-    public CadastroFuncionario(String nome) {
+    public CadastroFuncionario(String nome,String endereco, String telefone,String cpf, float salario, String cargo) {
         
         this.funcionario = new Funcionario();
         this.funcionario.setNome(nome);
+        this.funcionario = new Funcionario();
+        this.funcionario.setEndereco(endereco);
+        this.funcionario = new Funcionario();
+        this.funcionario.setTelefone(telefone);
+        this.funcionario = new Funcionario();
+        this.funcionario.setCpf(cpf);
+        this.funcionario = new Funcionario();
+        this.funcionario.setSalario(salario);
+        this.funcionario = new Funcionario();
+        this.funcionario.setCargo(cargo);
         
         
     }
+
+    
     
 }
