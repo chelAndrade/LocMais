@@ -143,8 +143,9 @@ public class Filme {
                   filme.getQuantiDisponivel();
                   filme.getValorCompra();
                   filme.getAnoLancamento();
+                  
             
-        } catch (Exception e) {
+           } catch (Exception e) {
             throw new RuntimeException(e);
         }
      }
