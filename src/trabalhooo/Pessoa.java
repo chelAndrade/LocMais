@@ -15,15 +15,6 @@ public abstract class Pessoa{
     protected String endereco;
     protected String telefone;
     protected int idade;
-    
-    
-    
-    public void alterarPessoa(int idPessoa,String nome, String cpf,String endereco, String telefone, int idade){
-    }
-    
-    public void excluirPessoa(int idPessoa,String nome, String cpf,String endereco, String telefone, int idade){
-    
-    }
 
     /**
      * @return the nome
