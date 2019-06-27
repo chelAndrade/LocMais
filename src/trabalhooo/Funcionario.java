@@ -12,6 +12,14 @@ package trabalhooo;
 public class Funcionario extends Pessoa{
     private float salario;
     private String cargo;
+    
+    public void cadastrarFornecedor(){
+         
+    }
+    
+    public void cadastrarCliente(){
+        
+    }
 
     /**
      * @return the salario
@@ -39,23 +47,5 @@ public class Funcionario extends Pessoa{
      */
     public void setCargo(String cargo) {
         this.cargo = cargo;
-    }
-    
-    public Funcionario(){
-       super();
-       super.setIdPessoa(0);
-       super.setCpf(cargo);
-       super.setEndereco(cargo);
-       super.setIdade(0);
-       super.setNome(cargo);
-       super.setTelefone(cargo);
-    }
-    
-    public void cadastrarFornecedor(){
-         
-    }
-    
-    public void cadastrarCliente(){
-        
     }
 }

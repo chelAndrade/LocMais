@@ -6,6 +6,7 @@
 package trabalhooo;
 
 import java.util.Date;
+import java.util.Scanner;
 
 
 
@@ -14,28 +15,20 @@ import java.util.Date;
  * @author michel,Christian 
  */
 public class Filme {
-     private int idFilme;
-     private String titulo;
-     private Date anoLancamento;
-     private String classificacaoIndicativa;
-     private int quantiDisponivel;
-     private float valorAlocacao;
-     private float valorCompra;
-
-    /**
-     * @return the idFilme
-     */
-    public int getIdFilme() {
-        return idFilme;
-    }
-
-    /**
-     * @param idFilme the idFilme to set
-     */
-    public void setIdFilme(int idFilme) {
-        this.idFilme = idFilme;
-    }
-
+     String titulo;
+     int anoLancamento;
+     int classificacaoIndicativa;
+     int quantDisponivel;
+     float valorAlocacao;
+     
+     //Construtor da classe
+     public Filme(String titulo,int anoLancamento,int classificacaoIndicativa,int quantDisponivel,float valorAlocacao){
+         this.titulo = titulo;
+         this.anoLancamento = anoLancamento;
+         this.classificacaoIndicativa = classificacaoIndicativa;
+         this.quantDisponivel = quantDisponivel;
+         this.valorAlocacao = valorAlocacao;
+     }
     /**
      * @return the titulo
      */
@@ -53,43 +46,43 @@ public class Filme {
     /**
      * @return the anoLancamento
      */
-    public Date getAnoLancamento() {
+    public int getAnoLancamento() {
         return anoLancamento;
     }
 
     /**
      * @param anoLancamento the anoLancamento to set
      */
-    public void setAnoLancamento(Date anoLancamento) {
+    public void setAnoLancamento(int anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
 
     /**
      * @return the classificacaoIndicativa
      */
-    public String getClassificacaoIndicativa() {
+    public int getClassificacaoIndicativa() {
         return classificacaoIndicativa;
     }
 
     /**
      * @param classificacaoIndicativa the classificacaoIndicativa to set
      */
-    public void setClassificacaoIndicativa(String classificacaoIndicativa) {
+    public void setClassificacaoIndicativa(int classificacaoIndicativa) {
         this.classificacaoIndicativa = classificacaoIndicativa;
     }
 
     /**
-     * @return the quantiDisponivel
+     * @return the quantDisponivel
      */
-    public int getQuantiDisponivel() {
-        return quantiDisponivel;
+    public int getQuantDisponivel() {
+        return quantDisponivel;
     }
 
     /**
-     * @param quantiDisponivel the quantiDisponivel to set
+     * @param quantDisponivel the quantDisponivel to set
      */
-    public void setQuantiDisponivel(int quantiDisponivel) {
-        this.quantiDisponivel = quantiDisponivel;
+    public void setQuantDisponivel(int quantDisponivel) {
+        this.quantDisponivel = quantDisponivel;
     }
 
     /**
@@ -105,60 +98,29 @@ public class Filme {
     public void setValorAlocacao(float valorAlocacao) {
         this.valorAlocacao = valorAlocacao;
     }
-
-    /**
-     * @return the valorCompra
-     */
-    public float getValorCompra() {
-        return valorCompra;
-    }
-
-    /**
-     * @param valorCompra the valorCompra to set
-     */
-    public void setValorCompra(float valorCompra) {
-        this.valorCompra = valorCompra;
-    }
-     
-    public Filme(int idFilme,String titulo,Date anoLancamento,String classificacaoIndicativa,int quantiDisponivel,float valorAlocacao, float valorCompra){
-        super();
-        this.idFilme = idFilme;
-        this.anoLancamento = anoLancamento;
-        this.classificacaoIndicativa = classificacaoIndicativa;
-        this.quantiDisponivel = quantiDisponivel;
-        this.titulo = titulo;
-        this.valorAlocacao = valorAlocacao;
-        this.valorCompra = valorCompra;
+    
+    public static Filme addFilme(){
+        Filme filme;
+        Scanner teclado = new Scanner(System.in);
+        String titulo;
+        int anoLancamento;
+        int classificacaoIndicativa;
+        int quantDisponivel;
+        float valorAlocacao;
         
+        System.out.print("Digite o nome do filme: ");
+        titulo = teclado.nextLine();
+        System.out.print("Digite o ano de lancamento: ");
+        anoLancamento = teclado.nextInt();
+        System.out.print("Digite a classificacao indicativa: ");
+        classificacaoIndicativa = teclado.nextInt();
+        System.out.print("Digite a quantidade disponivel: ");
+        quantDisponivel = teclado.nextInt();
+        System.out.print("Digite o valor de alocação: ");
+        valorAlocacao = teclado.nextFloat();
         
+        filme = new Filme(titulo,anoLancamento,classificacaoIndicativa,quantDisponivel,valorAlocacao);
+        
+        return filme;
     }
-     public void adicionarFilme(Filme filme){
-         int idFilme = filme.getIdFilme();
-         
-           try {
-                  filme.getIdFilme();
-                  filme.getTitulo();
-                  filme.getValorAlocacao();
-                  filme.getClassificacaoIndicativa();
-                  filme.getQuantiDisponivel();
-                  filme.getValorCompra();
-                  filme.getAnoLancamento();
-                  
-            
-           } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-     }
-     
-     public void excluirFilme(Filme filme){
-         try{
-            filme.getIdFilme();
-        }catch (Exception e){
-            throw new RuntimeException(e);
-        }
-     }
-     
-     public void editarFilme(int idFilme,String titulo,Date anoLancamento,String classificacaoIndicativa,int quantiDisponivel){
-     }
-     
 }
