@@ -51,6 +51,8 @@ public class Funcionario extends Pessoa{
        super.setTelefone(cargo);
     }
     
+   
+    
     public void cadastrarFornecedor(){
          
     }
