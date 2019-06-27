@@ -13,31 +13,6 @@ import java.util.Scanner;
  */
 public class Cliente extends Pessoa{
   
-    private String loginUsuario;
-
-    /**
-     * @return the loginUsuario
-     */
-    public String getLoginUsuario() {
-        return loginUsuario;
-    }
-
-    /**
-     * @param loginUsuario the loginUsuario to set
-     */
-    public void setLoginUsuario(String loginUsuario) {
-        this.loginUsuario = loginUsuario;
-    }
-    
-    
-    public void buscarUsuario(int idPessoa){
-        
-    }
-    
-    public boolean verificarPendencias(){
-        return false;
-        
-    }
     //construtor
     public Cliente(String nome,String cpf,String endereco,String telefone,int idade){
         this.nome = nome;
@@ -46,7 +21,7 @@ public class Cliente extends Pessoa{
         this.telefone = telefone;
         this.idade = idade;
     }
-    public static Cliente leCliente(){
+    public Cliente leCliente(){
         Scanner teclado = new Scanner(System.in);
         String nome;
         String cpf;
