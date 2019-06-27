@@ -5,7 +5,6 @@
  */
 package trabalhooo;
 
-import java.util.Date;
 
 /**
  *
@@ -15,8 +14,8 @@ public class FilmeAventura extends Filme{
     private String classificacaoIndicativa;
 
 
-    public FilmeAventura(String titulo, Date anoLancamento, String classificacaoIndicativa, int quantiDisponivel, float valorAlocacao, float valorCompra) {
-        super(titulo, anoLancamento, classificacaoIndicativa, quantiDisponivel, valorAlocacao, valorCompra);
+    public FilmeAventura(String titulo, String anoLancamento, String classificacaoIndicativa, int quantDisponivel, float valorAlocacao) {
+        super(titulo, anoLancamento, classificacaoIndicativa, quantDisponivel, valorAlocacao);
 
     }
     
@@ -54,11 +53,6 @@ public class FilmeAventura extends Filme{
                     }
                 }
             }
-        }  
-        
-    }
-    
-    public boolean disponAluguel(){
-        return true;
+        }     
     }
 }
