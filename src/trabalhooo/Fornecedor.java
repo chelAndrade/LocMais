@@ -103,7 +103,7 @@ public class Fornecedor {
         this.valorFilmes = valorFilmes;
     }
     
-    public Fornecedor(int idFornecedor,String nomeFornecedor,int cnpj, String telefone, String endereco){
+    public Fornecedor(String nomeFornecedor,int cnpj, String telefone, String endereco){
         super();
         //this.idFornecedor = idFornecedor;
         this.nomeFornecedor = nomeFornecedor;
@@ -112,7 +112,9 @@ public class Fornecedor {
         this.endereco = endereco;
         
     }
+    
     Scanner teclado = new Scanner(System.in);
+    
     public void alterarFornecedor(Fornecedor fornecedor){
        String nomeFornecedor = fornecedor.getNomeFornecedor();
        
