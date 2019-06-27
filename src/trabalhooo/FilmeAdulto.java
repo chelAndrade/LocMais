@@ -5,8 +5,6 @@
  */
 package trabalhooo;
 
-import java.util.Date;
-
 /**
  *
  * @author miche
@@ -15,8 +13,8 @@ public class FilmeAdulto extends Filme{
      private String classificacaoIndicativa;
 
 
-    public FilmeAdulto(String titulo, Date anoLancamento, String classificacaoIndicativa, int quantiDisponivel, float valorAlocacao, float valorCompra) {
-        super(titulo, anoLancamento, classificacaoIndicativa, quantiDisponivel, valorAlocacao, valorCompra);
+    public FilmeAdulto(String titulo, String anoLancamento, String classificacaoIndicativa, int quantDisponivel, float valorAlocacao) {
+        super(titulo, anoLancamento, classificacaoIndicativa, quantDisponivel, valorAlocacao);
 
     }
      
@@ -39,10 +37,5 @@ public class FilmeAdulto extends Filme{
                System.out.println("O usuario so pode alugar o filme mediante apresentacao de documento");
             }
         
-    }
-    
-    public boolean disponAluguel(){
-        return true;
-    }
-    
+     }
 }
