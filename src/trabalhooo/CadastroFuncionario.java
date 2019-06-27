@@ -28,6 +28,8 @@ public class CadastroFuncionario {
         this.funcionario = new Funcionario();
         this.funcionario.setCargo(cargo);
         
+   
+        
         
     }
 
