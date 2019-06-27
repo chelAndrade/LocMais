@@ -5,7 +5,7 @@
  */
 package trabalhooo;
 
-import java.util.Date;
+
 
 
 
@@ -15,11 +15,11 @@ import java.util.Date;
  */
 public class FilmeAcao extends Filme{
      private String classificacaoIndicativa;
-     private int quantiDisponivel;
+     private int quantDisponivel;
 
 
-    public FilmeAcao(String titulo, Date anoLancamento, String classificacaoIndicativa, int quantiDisponivel, float valorAlocacao, float valorCompra) {
-        super(titulo, anoLancamento, classificacaoIndicativa, quantiDisponivel, valorAlocacao, valorCompra);
+    public FilmeAcao(String titulo, String anoLancamento, String classificacaoIndicativa, int quantDisponivel, float valorAlocacao) {
+        super(titulo, anoLancamento, classificacaoIndicativa, quantDisponivel, valorAlocacao);
 
     
 
@@ -41,17 +41,17 @@ public class FilmeAcao extends Filme{
     }
     
     /**
-     * @return the quantiDisponivel
+     * @return the quantDisponivel
      */
     public int getQuantiDisponivel() {
-        return quantiDisponivel;
+        return quantDisponivel;
     }
 
     /**
-     * @param quantiDisponivel the quantiDisponivel to set
+     * @param quantDisponivel the quantDisponivel to set
      */
-    public void setQuantiDisponivel(int quantiDisponivel) {
-        this.quantiDisponivel = quantiDisponivel;
+    public void setQuantiDisponivel(int quantDisponivel) {
+        this.quantDisponivel = quantDisponivel;
     }
        
     public void classificarIdade(String idade){
@@ -75,12 +75,5 @@ public class FilmeAcao extends Filme{
                 }
             }
         }  
-    }
-    
-    public boolean disponAluguel(String titulo){
-        
-        return true;
-    }
-
-    
+    }  
 }
