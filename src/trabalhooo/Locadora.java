@@ -40,6 +40,7 @@ public class Locadora {
      * @return the fornecedor
      */
     public String[] getFornecedor() {
+        System.out.println("");
         return fornecedor;
     }
 
