@@ -17,8 +17,13 @@ public class FilmeAcao extends Filme{
      private String classificacaoIndicativa;
      private int quantiDisponivel;
 
+<<<<<<< HEAD
     public FilmeAcao(String titulo, Date anoLancamento, String classificacaoIndicativa, int quantiDisponivel, float valorAlocacao, float valorCompra) {
         super(titulo, anoLancamento, classificacaoIndicativa, quantiDisponivel, valorAlocacao, valorCompra);
+=======
+    public FilmeAcao(int idFilme, String titulo, Date anoLancamento, String classificacaoIndicativa, int quantiDisponivel, float valorAlocacao, float valorCompra) {
+        super(idFilme, titulo, anoLancamento, classificacaoIndicativa, quantiDisponivel, valorAlocacao, valorCompra);
+>>>>>>> 33d221c8855a141f9036985a13e6a7228bba174c
     }
      
     
