@@ -12,6 +12,13 @@ package trabalhooo;
 public class Cliente extends Pessoa{
   
     private String loginUsuario;
+    private float saldo;
+    
+    
+    public Cliente(){
+        this.loginUsuario = loginUsuario;
+        this.saldo = saldo;
+    }
 
     /**
      * @return the loginUsuario
@@ -27,13 +34,19 @@ public class Cliente extends Pessoa{
         this.loginUsuario = loginUsuario;
     }
     
-    
-    public void buscarUsuario(int idPessoa){
-        
+    public float  getSaldo(){
+        return saldo;
     }
     
-    public boolean verificarPendencias(){
-        return false;
+    public void setSaldo(float saldo){
+        this.saldo = saldo;
+    }
+    
+    /*public void buscarUsuario(int idPessoa){
+        
+    }*/
+    
+    public void verificarPendencias(float saldo){
         
     }
 
