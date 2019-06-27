@@ -109,13 +109,5 @@ public abstract class Pessoa  {
        this.idade = idade;
        this.telefone = telefone;
     }
-    public void alterarPessoa(String nome, String cpf,String endereco, String telefone, int idade){
-    }
-    
-   public void excluirPessoa(String nome, String cpf,String endereco, String telefone, int idade){
-  
-       
-    }
- 
 
 }
