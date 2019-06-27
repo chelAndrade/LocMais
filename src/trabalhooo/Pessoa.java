@@ -101,12 +101,20 @@ public abstract class Pessoa  {
         this.idade = idade;
     }
     
-    
-    public void alterarPessoa(int idPessoa,String nome, String cpf,String endereco, String telefone, int idade){
+    public Pessoa(String nome, String cpf,String endereco, String telefone, int idade){
+       super();
+       this.nome = nome;
+       this.cpf = cpf;
+       this.endereco = endereco;
+       this.idade = idade;
+       this.telefone = telefone;
+    }
+    public void alterarPessoa(String nome, String cpf,String endereco, String telefone, int idade){
     }
     
-    public void excluirPessoa(int idPessoa,String nome, String cpf,String endereco, String telefone, int idade){
-    
+   public void excluirPessoa(String nome, String cpf,String endereco, String telefone, int idade){
+  
+       
     }
  
 
