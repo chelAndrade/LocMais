@@ -10,7 +10,7 @@ package trabalhooo;
  * @author miche
  */
 public class Fornecedor {
-    private int idFornecedor;
+    //private int idFornecedor;
     private String nomeFornecedor;
     private String endereco;
     private String telefone;
@@ -20,14 +20,14 @@ public class Fornecedor {
     /**
      * @return the idFornecedor
      */
-    public int getIdFornecedor() {
+    /*public int getIdFornecedor() {
         return idFornecedor;
     }
 
     /**
      * @param idFornecedor the idFornecedor to set
      */
-    public void setIdFornecedor(int idFornecedor) {
+    /*public void setIdFornecedor(int idFornecedor) {
         this.idFornecedor = idFornecedor;
     }
 
@@ -103,7 +103,7 @@ public class Fornecedor {
     
     public Fornecedor(int idFornecedor,String nomeFornecedor,int cnpj, String telefone, String endereco){
         super();
-        this.idFornecedor = idFornecedor;
+        //this.idFornecedor = idFornecedor;
         this.nomeFornecedor = nomeFornecedor;
         this.cnpj = cnpj;
         this.telefone = telefone;
@@ -111,12 +111,11 @@ public class Fornecedor {
         
     }
     public void alterarFornecedor(Fornecedor fornecedor){
-       int idFornecedor = fornecedor.getIdFornecedor();
+       String nomeFornecedor = fornecedor.getNomeFornecedor();
        
         try {
             fornecedor.getCnpj();
             fornecedor.getEndereco();
-            fornecedor.getNomeFornecedor();
             fornecedor.getTelefone();
             
         } catch (Exception e) {
@@ -126,7 +125,7 @@ public class Fornecedor {
     
     public void excluirFornecedor(Fornecedor fornecedor){
         try{
-            fornecedor.getIdFornecedor();
+            fornecedor.getNomeFornecedor();
         }catch (Exception e){
             throw new RuntimeException(e);
         }
