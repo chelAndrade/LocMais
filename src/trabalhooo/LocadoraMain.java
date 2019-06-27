@@ -5,6 +5,7 @@
  */
 package trabalhooo;
 
+import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -20,7 +21,7 @@ public class LocadoraMain {
      * @param args the command line arguments
      */
     
-    public static void abreJanela(){
+    /*public static void abreJanela(){
         JFrame frame = new JFrame("LocMais");
          JPanel painel = new JPanel();
         
@@ -48,9 +49,12 @@ public class LocadoraMain {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-    }
+    }*/
     
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+       
+        
         //System.out.println("ola mundo");
          /*JFrame frame = new JFrame("LocMais");
          JPanel painel = new JPanel();
