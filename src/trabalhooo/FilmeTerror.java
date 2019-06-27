@@ -17,6 +17,7 @@ public class FilmeTerror  extends Filme{
 
     public FilmeTerror( String titulo, Date anoLancamento, String classificacaoIndicativa, int quantiDisponivel, float valorAlocacao, float valorCompra) {
         super( titulo, anoLancamento, classificacaoIndicativa, quantiDisponivel, valorAlocacao, valorCompra);
+    }
     /**
      * @return the classificacaoIndicativa
      */
