@@ -5,12 +5,18 @@
  */
 package trabalhooo;
 
+import java.util.Date;
+
 /**
  *
  * @author miche
  */
 public class FilmeAdulto extends Filme{
      private String classificacaoIndicativa;
+
+    public FilmeAdulto(String titulo, Date anoLancamento, String classificacaoIndicativa, int quantiDisponivel, float valorAlocacao, float valorCompra) {
+        super(titulo, anoLancamento, classificacaoIndicativa, quantiDisponivel, valorAlocacao, valorCompra);
+    }
      
       /**
      * @return the classificacaoIndicativa
