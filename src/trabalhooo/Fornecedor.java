@@ -5,6 +5,8 @@
  */
 package trabalhooo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author miche
@@ -110,6 +112,7 @@ public class Fornecedor {
         this.endereco = endereco;
         
     }
+    Scanner teclado = new Scanner(System.in);
     public void alterarFornecedor(Fornecedor fornecedor){
        String nomeFornecedor = fornecedor.getNomeFornecedor();
        
@@ -131,9 +134,21 @@ public class Fornecedor {
         }
     }
     
-    public boolean consultaFornecedor(){
-        return true;
+    public void consultaFornecedor(){
+        int cnpj;
+        
+        System.out.println("Digite o CNPJ");
+        
+        cnpj = teclado.nextInt();
+        
+       /*for(int i = 0; i < fornecedor.lenght; i++ ){
+            if (fornecedor.getCnpj().equals(cnpj)){
+                System.out.println("Fornecedor: " + fornecedor.getNomeFornecedor());
+                return;  
+            }
+        }
+        System.out.println("Fornecedor nao encontrado");
+    }*/
     }
-            
-    
+           
 }
