@@ -22,15 +22,16 @@ public class Locacao {
    List<Filme> filmes;
    Date dataLocacao;
    Calendar dataDevolucao;
+   float valorTotal;
    
-   
-   public Locacao(Cliente cliente, List<Filme> filmes) {
+   public Locacao(Cliente cliente, List<Filme> filmes, float valorTotal) {
         this.cliente = cliente;
         this.filmes = filmes;
         this.dataLocacao = new Date();// data atual
         this.dataDevolucao = Calendar.getInstance();
         dataDevolucao.setTime(dataLocacao);
-        dataDevolucao.add(Calendar.DATE, +3); //3 dias acrescentado a data atual
+        dataDevolucao.add(Calendar.DATE, +3);//3 dias acrescentado a data atual
+        this.valorTotal = valorTotal;
     }
    
     
@@ -61,16 +62,7 @@ public class Locacao {
     public void setDataDevolucao(Calendar dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }
-   
-   public boolean alugar(){
-       return true;
-   }
-   
-   public boolean  devolver(){
-     return true;
-   }
-   
-   public static Locacao alugar(List<Filme> filmes, List<Cliente> clientes) {
+   public Locacao alugar(List<Filme> filmes, List<Cliente> clientes) {
         ArrayList<String> nomeFilmes = new ArrayList<>();
         String nomeCliente;
         Scanner teclado = new Scanner(System.in);
@@ -93,12 +85,22 @@ public class Locacao {
                 break;
             }
         }
-
+        float valorTotal = 0;
         for (int i=0;i<nomeFilmes.size();i++) {
             for(int j=0;j<filmes.size();j++){
-                if (filmes.get(j).titulo.equals(nomeFilmes.get(i))) {
-                    filmesSelecionados.add(filmes.get(j));
-                    break;
+                if (filmes.get(j).titulo.equals(nomeFilmes.get(i))){
+                    if(filmes.get(j).quantDisponivel > 0){
+                        if(filmes.get(j).classificacaoIndicativa > clienteSelecionado.idade){
+                            filmesSelecionados.add(filmes.get(j));
+                            valorTotal = valorTotal + filmes.get(j).valorAlocacao;
+                            filmes.get(j).quantDisponivel --;
+                            break;
+                        }else{
+                            System.out.println("Sua idade é menor que a classificacao indicativa");
+                        }
+                    }else{
+                        System.out.println("Não existe estoque no momento");
+                    }
                 }
             }
         }
@@ -106,7 +108,7 @@ public class Locacao {
         if (clienteSelecionado != null && filmesSelecionados != null) {
             List<Filme> filmesAlugados = new ArrayList<>();
             filmesAlugados = filmesSelecionados;
-            return new Locacao(clienteSelecionado, filmesAlugados);
+            return new Locacao(clienteSelecionado, filmesAlugados, valorTotal);
         } else {
             return null;
         }
