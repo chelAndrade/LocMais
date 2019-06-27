@@ -13,12 +13,13 @@ public class Cliente extends Pessoa{
   
     private String loginUsuario;
     private float saldo;
-    
-    
-    public Cliente(){
-        this.loginUsuario = loginUsuario;
-        this.saldo = saldo;
+
+    public Cliente(String nome, String cpf, String endereco, String telefone, int idade) {
+        super(nome, cpf, endereco, telefone, idade);
     }
+    
+    
+   
 
     /**
      * @return the loginUsuario
