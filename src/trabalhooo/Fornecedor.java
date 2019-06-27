@@ -17,7 +17,7 @@ public class Fornecedor {
     private String endereco;
     private String telefone;
     private int cnpj;
-    private float valorFilmes;
+    //private float valorFilmes;
 
     /**
      * @return the idFornecedor
@@ -92,16 +92,16 @@ public class Fornecedor {
     /**
      * @return the valorFilmes
      */
-    public float getValorFilmes() {
+    /*public float getValorFilmes() {
         return valorFilmes;
     }
 
     /**
      * @param valorFilmes the valorFilmes to set
      */
-    public void setValorFilmes(float valorFilmes) {
+    /*public void setValorFilmes(float valorFilmes) {
         this.valorFilmes = valorFilmes;
-    }
+    }*/
     
     public Fornecedor(String nomeFornecedor,int cnpj, String telefone, String endereco){
         super();
