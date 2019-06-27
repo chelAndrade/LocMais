@@ -18,6 +18,7 @@ public class FilmeComedia extends Filme{
 
     public FilmeComedia(String titulo, Date anoLancamento, String classificacaoIndicativa, int quantiDisponivel, float valorAlocacao, float valorCompra) {
         super(titulo, anoLancamento, classificacaoIndicativa, quantiDisponivel, valorAlocacao, valorCompra);
+    }
 
     /**
      * @return the classificacaoIndicativa
@@ -34,20 +35,20 @@ public class FilmeComedia extends Filme{
     }
     
      public void classificarIdade(String idade){
-         if (this.classificacaoIndicativa == "livre") {
+         if (this.getClassificacaoIndicativa() == "livre") {
             System.out.println("O usuario pode alugar o filme");
             
         }else{
-            if (this.classificacaoIndicativa == "12") {
+            if (this.getClassificacaoIndicativa() == "12") {
                  System.out.println("O usuario so pode alugar o filme mediante apresentacao de documento");
             }else{
-                if (this.classificacaoIndicativa == "14") {
+                if (this.getClassificacaoIndicativa() == "14") {
                     System.out.println("O usuario so pode alugar o filme mediante apresentacao de documento");
                 }else{
-                    if (this.classificacaoIndicativa == "16") {
+                    if (this.getClassificacaoIndicativa() == "16") {
                         System.out.println("O usuario so pode alugar o filme mediante apresentacao de documento");
                     }else{
-                        if (this.classificacaoIndicativa == "18") {
+                        if (this.getClassificacaoIndicativa() == "18") {
                             System.out.println("O usuario so pode alugar o filme mediante apresentacao de documento");
                         }
                     }
@@ -56,8 +57,5 @@ public class FilmeComedia extends Filme{
         }  
         
     }
-    
-    public boolean disponAluguel(){
-        return true;
-    }
 }
+
