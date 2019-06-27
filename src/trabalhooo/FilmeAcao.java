@@ -73,7 +73,7 @@ public class FilmeAcao extends Filme{
         }  
     }
     
-    public boolean disponAluguel(){
+    public boolean disponAluguel(String titulo){
         
         return true;
     }
