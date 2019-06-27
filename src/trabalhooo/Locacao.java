@@ -17,14 +17,14 @@ import java.util.Scanner;
  * @author miche
  */
 public class Locacao {
-   
-   Cliente cliente;
-   List<Filme> filmes;
-   Date dataLocacao;
-   Calendar dataDevolucao;
-   float valorTotal;
-   
-   public Locacao(Cliente cliente, List<Filme> filmes, float valorTotal) {
+
+    Cliente cliente;
+    List<Filme> filmes;
+    Date dataLocacao;
+    Calendar dataDevolucao;
+    float valorTotal;
+
+    public Locacao(Cliente cliente, List<Filme> filmes, float valorTotal) {
         this.cliente = cliente;
         this.filmes = filmes;
         this.dataLocacao = new Date();// data atual
@@ -33,8 +33,7 @@ public class Locacao {
         dataDevolucao.add(Calendar.DATE, +3);//3 dias acrescentado a data atual
         this.valorTotal = valorTotal;
     }
-   
-    
+
     /**
      * @return the dataLocacao
      */
@@ -62,7 +61,8 @@ public class Locacao {
     public void setDataDevolucao(Calendar dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }
-   public Locacao alugar(List<Filme> filmes, List<Cliente> clientes) {
+
+    public Locacao alugar(List<Filme> filmes, List<Cliente> clientes) {
         ArrayList<String> nomeFilmes = new ArrayList<>();
         String nomeCliente;
         Scanner teclado = new Scanner(System.in);
@@ -70,8 +70,8 @@ public class Locacao {
         filmesSelecionados = null;
         Cliente clienteSelecionado = null;
         String parador = null;
-        for(int i=0;parador != "N";i++){
-            System.out.println("Digite o nome do filme:"+i+1);
+        for (int i = 0; parador != "N"; i++) {
+            System.out.println("Digite o nome do filme:" + i + 1);
             nomeFilmes.add(teclado.nextLine());
             System.out.println("Se Deseja alugar mais filmes digite 'S' senão digite 'N'");
             parador = teclado.nextLine();
@@ -86,19 +86,19 @@ public class Locacao {
             }
         }
         float valorTotal = 0;
-        for (int i=0;i<nomeFilmes.size();i++) {
-            for(int j=0;j<filmes.size();j++){
-                if (filmes.get(j).titulo.equals(nomeFilmes.get(i))){
-                    if(filmes.get(j).quantDisponivel > 0){
-                        if(filmes.get(j).classificacaoIndicativa > clienteSelecionado.idade){
+        for (int i = 0; i < nomeFilmes.size(); i++) {
+            for (int j = 0; j < filmes.size(); j++) {
+                if (filmes.get(j).titulo.equals(nomeFilmes.get(i))) {
+                    if (filmes.get(j).quantDisponivel > 0) {
+                        if (filmes.get(j).classificacaoIndicativa > clienteSelecionado.idade) {
                             filmesSelecionados.add(filmes.get(j));
                             valorTotal = valorTotal + filmes.get(j).valorAlocacao;
-                            filmes.get(j).quantDisponivel --;
+                            filmes.get(j).quantDisponivel--;
                             break;
-                        }else{
+                        } else {
                             System.out.println("Sua idade é menor que a classificacao indicativa");
                         }
-                    }else{
+                    } else {
                         System.out.println("Não existe estoque no momento");
                     }
                 }
@@ -112,5 +112,55 @@ public class Locacao {
         } else {
             return null;
         }
+    }
+
+    public void devolver(List<Filme> filmes, List<Cliente> clientes) {
+        ArrayList<String> nomeFilmes = new ArrayList<>();
+        String nomeCliente;
+        Scanner teclado = new Scanner(System.in);
+        ArrayList<Filme> filmesSelecionados = new ArrayList<>();
+        filmesSelecionados = null;
+        Cliente clienteSelecionado = null;
+        String parador = null;
+        for (int i = 0; parador != "N"; i++) {
+            System.out.println("Digite o nome do filme:" + i + 1);
+            nomeFilmes.add(teclado.nextLine());
+            System.out.println("Se Deseja devolver mais filmes digite 'S' senão digite 'N'");
+            parador = teclado.nextLine();
+        }
+        System.out.println("Digite o nome do cliente:");
+        nomeCliente = teclado.nextLine();
+
+        for (Cliente cliente : clientes) {
+            if (cliente.nome.equals(nomeCliente)) {
+                clienteSelecionado = cliente;
+                break;
+            }
+        }
+
+        float valorMulta = 0;
+        //repõe estoque
+        for (int i = 0; i < nomeFilmes.size(); i++) {
+            for (int j = 0; j < filmes.size(); j++) {
+                if (filmes.get(j).titulo.equals(nomeFilmes.get(i))) {
+                    filmesSelecionados.add(filmes.get(j));
+                    filmes.get(j).quantDisponivel++;
+                    break;
+                }
+
+            }
+
+        }
+        //procura falta de filmes na devolucao e aplica multa
+        for (int i = 0; i < filmesSelecionados.size(); i++) {
+            for (int j = 0; j < filmes.size(); j++) {
+                if (filmes.get(j).titulo.equals(filmesSelecionados.get(i))) {
+                    filmesSelecionados.remove(i);
+                }
+            }
+        }
+        //apliacao da multa 5 reais por filme
+        valorMulta = 5 * filmesSelecionados.size();
+
     }
 }
