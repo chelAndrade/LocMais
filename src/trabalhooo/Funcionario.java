@@ -5,6 +5,8 @@
  */
 package trabalhooo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author miche
@@ -12,6 +14,9 @@ package trabalhooo;
 public class Funcionario extends Pessoa{
     private float salario;
     private String cargo;
+    private String loginUsuario;
+
+    
 
     /**
      * @return the salario
@@ -40,24 +45,41 @@ public class Funcionario extends Pessoa{
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
-    
+
+    /**
+     * @return the loginUsuario
+     */
+    public String getLoginUsuario() {
+        return loginUsuario;
+    }
+
+    /**
+     * @param loginUsuario the loginUsuario to set
+     */
+    public void setLoginUsuario(String loginUsuario) {
+        this.loginUsuario = loginUsuario;
+    }
+
+  
     public Funcionario(){
-       super();
+       System.out.println("Digite a senha do funcionario");
+       Scanner teclado = new Scanner(System.in);
+       this.loginUsuario = teclado.nextLine();
        super.setIdPessoa(0);
        super.setCpf(cargo);
        super.setEndereco(cargo);
        super.setIdade(0);
        super.setNome(cargo);
        super.setTelefone(cargo);
-    }
+     
+    } 
+}
+
+
+   
+    
+
     
    
     
-    public void cadastrarFornecedor(){
-         
-    }
-    
-    public void cadastrarCliente(){
-        
-    }
-}
+  
