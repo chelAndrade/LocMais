@@ -18,6 +18,7 @@ public class Fornecedor {
     private String telefone;
     private String cnpj;
    
+    public Fornecedor(){}
     /**
      * @return the nomeFornecedor
      */
