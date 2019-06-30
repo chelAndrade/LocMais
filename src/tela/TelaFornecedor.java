@@ -139,12 +139,12 @@ public class TelaFornecedor extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Fornecedor fornecedor = new Fornecedor(){
+        /*Fornecedor fornecedor = new Fornecedor(){
             String nomeFornecedor = jTextField1.getText();
             String endereco = jTextField2.getText();
             String telefone = jTextField3.getText();
             String cnpj = jTextField4.getText();
-        };
+        };*/
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
