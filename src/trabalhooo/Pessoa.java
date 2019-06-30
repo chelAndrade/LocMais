@@ -18,7 +18,7 @@ public abstract class Pessoa  {
     private int idade;
     
     
-
+   public  Pessoa(){}
     /**
      * @return the idPessoa
      */
