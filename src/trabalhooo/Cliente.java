@@ -5,50 +5,38 @@
  */
 package trabalhooo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author miche
  */
 public class Cliente extends Pessoa{
   
-    private String loginUsuario;
-    private float saldo;
-
     public Cliente(String nome, String cpf, String endereco, String telefone, int idade) {
         super(nome, cpf, endereco, telefone, idade);
     }
     
-    
-   
-
-    /**
-     * @return the loginUsuario
-     */
-    public String getLoginUsuario() {
-        return loginUsuario;
-    }
-
-    /**
-     * @param loginUsuario the loginUsuario to set
-     */
-    public void setLoginUsuario(String loginUsuario) {
-        this.loginUsuario = loginUsuario;
-    }
-    
-    public float  getSaldo(){
-        return saldo;
-    }
-    
-    public void setSaldo(float saldo){
-        this.saldo = saldo;
-    }
-    
-    /*public void buscarUsuario(int idPessoa){
+    public Cliente leCliente(){
+        Scanner teclado = new Scanner(System.in);
+        String nome;
+        String cpf;
+        String endereco;
+        String telefone;
+        int idade;
         
-    }*/
-    
-    public void verificarPendencias(float saldo){
+        System.out.print("Digite o nome do cliente: ");
+        nome = teclado.nextLine();
+        System.out.print("Digite o CPF do cliente: ");
+        cpf = teclado.nextLine();
+        System.out.println("Digite o endereco do cliente");
+        endereco = teclado.nextLine();
+        System.out.println("Digite o telefone do cliente");
+        telefone = teclado.nextLine();
+        System.out.println("Digite a idade do cliente");
+        idade = teclado.nextInt();
         
+        return new Cliente(nome, cpf, endereco, telefone, idade);
     }
 
     
