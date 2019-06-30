@@ -12,27 +12,12 @@ import java.util.Scanner;
  * @author miche
  */
 public class Fornecedor {
-    //private int idFornecedor;
+    
     private String nomeFornecedor;
     private String endereco;
     private String telefone;
-    private int cnpj;
-    //private float valorFilmes;
-
-    /**
-     * @return the idFornecedor
-     */
-    /*public int getIdFornecedor() {
-        return idFornecedor;
-    }
-
-    /**
-     * @param idFornecedor the idFornecedor to set
-     */
-    /*public void setIdFornecedor(int idFornecedor) {
-        this.idFornecedor = idFornecedor;
-    }
-
+    private String cnpj;
+   
     /**
      * @return the nomeFornecedor
      */
@@ -78,32 +63,18 @@ public class Fornecedor {
     /**
      * @return the cnpj
      */
-    public int getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
     /**
      * @param cnpj the cnpj to set
      */
-    public void setCnpj(int cnpj) {
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
-
-    /**
-     * @return the valorFilmes
-     */
-    /*public float getValorFilmes() {
-        return valorFilmes;
-    }
-
-    /**
-     * @param valorFilmes the valorFilmes to set
-     */
-    /*public void setValorFilmes(float valorFilmes) {
-        this.valorFilmes = valorFilmes;
-    }*/
     
-    public Fornecedor(String nomeFornecedor,int cnpj, String telefone, String endereco){
+    public Fornecedor(String nomeFornecedor,String cnpj, String telefone, String endereco){
         super();
         //this.idFornecedor = idFornecedor;
         this.nomeFornecedor = nomeFornecedor;
@@ -135,22 +106,5 @@ public class Fornecedor {
             throw new RuntimeException(e);
         }
     }
-    
-    public void consultaFornecedor(){
-        int cnpj;
-        
-        System.out.println("Digite o CNPJ");
-        
-        cnpj = teclado.nextInt();
-        
-       /*for(int i = 0; i < fornecedor.lenght; i++ ){
-            if (fornecedor.getCnpj().equals(cnpj)){
-                System.out.println("Fornecedor: " + fornecedor.getNomeFornecedor());
-                return;  
-            }
-        }
-        System.out.println("Fornecedor nao encontrado");
-    }*/
-    }
-           
 }
+    
