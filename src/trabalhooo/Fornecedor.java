@@ -5,32 +5,19 @@
  */
 package trabalhooo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author miche
  */
 public class Fornecedor {
-    private int idFornecedor;
+    
     private String nomeFornecedor;
     private String endereco;
     private String telefone;
-    private int cnpj;
-    private float valorFilmes;
-
-    /**
-     * @return the idFornecedor
-     */
-    public int getIdFornecedor() {
-        return idFornecedor;
-    }
-
-    /**
-     * @param idFornecedor the idFornecedor to set
-     */
-    public void setIdFornecedor(int idFornecedor) {
-        this.idFornecedor = idFornecedor;
-    }
-
+    private String cnpj;
+   
     /**
      * @return the nomeFornecedor
      */
@@ -76,47 +63,35 @@ public class Fornecedor {
     /**
      * @return the cnpj
      */
-    public int getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
     /**
      * @param cnpj the cnpj to set
      */
-    public void setCnpj(int cnpj) {
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
-
-    /**
-     * @return the valorFilmes
-     */
-    public float getValorFilmes() {
-        return valorFilmes;
-    }
-
-    /**
-     * @param valorFilmes the valorFilmes to set
-     */
-    public void setValorFilmes(float valorFilmes) {
-        this.valorFilmes = valorFilmes;
-    }
     
-    public Fornecedor(int idFornecedor,String nomeFornecedor,int cnpj, String telefone, String endereco){
+    public Fornecedor(String nomeFornecedor,String cnpj, String telefone, String endereco){
         super();
-        this.idFornecedor = idFornecedor;
+        //this.idFornecedor = idFornecedor;
         this.nomeFornecedor = nomeFornecedor;
         this.cnpj = cnpj;
         this.telefone = telefone;
         this.endereco = endereco;
         
     }
+    
+    Scanner teclado = new Scanner(System.in);
+    
     public void alterarFornecedor(Fornecedor fornecedor){
-       int idFornecedor = fornecedor.getIdFornecedor();
+       String nomeFornecedor = fornecedor.getNomeFornecedor();
        
         try {
             fornecedor.getCnpj();
             fornecedor.getEndereco();
-            fornecedor.getNomeFornecedor();
             fornecedor.getTelefone();
             
         } catch (Exception e) {
@@ -126,15 +101,10 @@ public class Fornecedor {
     
     public void excluirFornecedor(Fornecedor fornecedor){
         try{
-            fornecedor.getIdFornecedor();
+            fornecedor.getNomeFornecedor();
         }catch (Exception e){
             throw new RuntimeException(e);
         }
     }
-    
-    public boolean consultaFornecedor(){
-        return true;
-    }
-            
-    
 }
+    

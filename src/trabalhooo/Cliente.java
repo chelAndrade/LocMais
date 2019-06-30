@@ -13,14 +13,10 @@ import java.util.Scanner;
  */
 public class Cliente extends Pessoa{
   
-    //construtor
-    public Cliente(String nome,String cpf,String endereco,String telefone,int idade){
-        this.nome = nome;
-        this.cpf = cpf;
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.idade = idade;
+    public Cliente(String nome, String cpf, String endereco, String telefone, int idade) {
+        super(nome, cpf, endereco, telefone, idade);
     }
+    
     public Cliente leCliente(){
         Scanner teclado = new Scanner(System.in);
         String nome;
@@ -42,6 +38,6 @@ public class Cliente extends Pessoa{
         
         return new Cliente(nome, cpf, endereco, telefone, idade);
     }
-    
+
     
 }
