@@ -71,6 +71,11 @@ public class TelaFornecedor extends javax.swing.JFrame {
         label4.setText("CNPJ");
 
         jButton2.setText("Atualizar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Sair");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -139,12 +144,16 @@ public class TelaFornecedor extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        /*Fornecedor fornecedor = new Fornecedor(){
+         String cadastro = jButton1.getText();
+        //Cadastro cadastro = new Cadastro(cadastro);              
+        JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
+        
+        Fornecedor fornecedor = new Fornecedor(){
             String nomeFornecedor = jTextField1.getText();
             String endereco = jTextField2.getText();
             String telefone = jTextField3.getText();
             String cnpj = jTextField4.getText();
-        };*/
+        };
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -158,6 +167,13 @@ public class TelaFornecedor extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+         String atualizar = jButton2.getText();
+        //Cadastro cadastro = new Cadastro(cadastro);              
+        JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
