@@ -6,7 +6,9 @@
 package tela;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import trabalhooo.Filme;
 
 /**
  *
@@ -162,6 +164,23 @@ public class TelaFilmes extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        Filme cadastroFilme = new Filme(){
+            String titulo = jTextField1.getText();
+            String anoLancemento = jTextField2.getText();
+            String classificacao = jTextField3.getText();
+            String quantDisponivel = jTextField4.getText();
+            String valorAlocacao = jTextField5.getText();
+            
+             /*try {
+              int quantDisponivel =  Integer.parseInt(this.quantDisponivel);
+              
+              dispose();
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Digite a quantidade e o valor  corretamente.");
+        }  */         
+            
+        };
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
