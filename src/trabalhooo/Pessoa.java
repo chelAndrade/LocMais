@@ -15,7 +15,13 @@ public abstract class Pessoa{
     protected String endereco;
     protected String telefone;
     protected int idade;
-
+    public Pessoa(String nome, String cpf, String endereco, String telefone, int idade){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.idade = idade;
+    }
     /**
      * @return the nome
      */
