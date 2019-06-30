@@ -6,7 +6,7 @@
 package tela;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import trabalhooo.Pessoa;
 
@@ -142,13 +142,22 @@ public class TelaPessoa extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        /*Pessoa pessoa = new Pessoa() {
+        Pessoa cadPessoa = new Pessoa() {
             String nome = jTextField1.getText();
             String cpf = jTextField2.getText();
             String endereco = jTextField3.getText();
             String telefone = jTextField4.getText();
             String idade =  jTextField5.getText();
-        };*/
+            
+        /*try {
+              int idade =  Integer.parseInt(this.idade) ;
+              
+              //cadastroPessoa.Pessoa(nome, (int) idade, cpf,endereco,telefone);
+              dispose();
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Digite idade corretamente.");
+        }*/                
+        };
          
     }//GEN-LAST:event_jButton1ActionPerformed
 
