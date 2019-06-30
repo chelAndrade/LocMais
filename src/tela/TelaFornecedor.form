@@ -35,15 +35,19 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="textField1" pref="612" max="32767" attributes="0"/>
-                          <Component id="textField2" max="32767" attributes="0"/>
-                          <Component id="textField4" alignment="0" pref="124" max="32767" attributes="0"/>
-                          <Component id="textField3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextField1" max="32767" attributes="0"/>
+                          <Component id="jTextField2" max="32767" attributes="0"/>
+                          <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextField4" min="-2" pref="612" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="369" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" pref="239" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" pref="156" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                      <Component id="jButton3" min="-2" pref="132" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="233" max="32767" attributes="0"/>
@@ -56,26 +60,30 @@
               <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="label1" min="-2" max="-2" attributes="0"/>
-                  <Component id="textField1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="textField2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
                   <Component id="label2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="label3" min="-2" max="-2" attributes="0"/>
-                  <Component id="textField3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="label4" min="-2" max="-2" attributes="0"/>
-                  <Component id="textField4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField4" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="185" max="32767" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="163" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,18 +102,12 @@
         <Property name="text" type="java.lang.String" value="Nome Fornecedor"/>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="textField1"/>
-      </Properties>
+    <Component class="java.awt.TextField" name="jTextField1">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="java.awt.TextField" name="textField2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="textField2"/>
-      </Properties>
+    <Component class="java.awt.TextField" name="jTextField2">
     </Component>
     <Component class="java.awt.Label" name="label2">
       <Properties>
@@ -117,20 +119,27 @@
         <Property name="text" type="java.lang.String" value="Telefone"/>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="textField3"/>
-      </Properties>
+    <Component class="java.awt.TextField" name="jTextField3">
     </Component>
     <Component class="java.awt.Label" name="label4">
       <Properties>
         <Property name="text" type="java.lang.String" value="CNPJ"/>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField4">
+    <Component class="java.awt.TextField" name="jTextField4">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="textField4"/>
+        <Property name="text" type="java.lang.String" value="Atualizar"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sair"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
