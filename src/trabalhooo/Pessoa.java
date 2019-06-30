@@ -16,6 +16,8 @@ public abstract class Pessoa  {
     private String endereco;
     private String telefone;
     private int idade;
+    
+    
 
     /**
      * @return the idPessoa
@@ -102,12 +104,14 @@ public abstract class Pessoa  {
     }
     
     public Pessoa(String nome, String cpf,String endereco, String telefone, int idade){
-       super();
+       //super();
        this.nome = nome;
        this.cpf = cpf;
        this.endereco = endereco;
        this.idade = idade;
        this.telefone = telefone;
     }
+   
+ 
 
 }
