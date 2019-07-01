@@ -44,7 +44,6 @@
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jTextField4" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
-                          <Component id="jTextField5" alignment="0" min="-2" pref="320" max="-2" attributes="0"/>
                           <Component id="jTextField2" alignment="0" min="-2" pref="508" max="-2" attributes="0"/>
                           <Component id="jTextField1" min="-2" pref="526" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -56,6 +55,7 @@
                               </Group>
                               <Component id="jTextField3" min="-2" pref="477" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jTextField5" alignment="0" min="-2" pref="320" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
