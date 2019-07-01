@@ -1,5 +1,7 @@
 package tela;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -18,7 +20,7 @@ import trabalhooo.Funcionario;
  * @author miche
  */
 public class TelaFornecedor extends javax.swing.JFrame {
-
+    List<Fornecedor> listaDeFornecedores = new ArrayList<>();
     /**
      * Creates new form Fornecedor
      */
@@ -148,12 +150,14 @@ public class TelaFornecedor extends javax.swing.JFrame {
         //Cadastro cadastro = new Cadastro(cadastro);              
         JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
         
-        Fornecedor fornecedor = new Fornecedor(){
+        
             String nomeFornecedor = jTextField1.getText();
             String endereco = jTextField2.getText();
             String telefone = jTextField3.getText();
             String cnpj = jTextField4.getText();
-        };
+            Fornecedor fornecedor = new Fornecedor(nomeFornecedor, cnpj, telefone, endereco);
+            listaDeFornecedores.add(fornecedor);
+            System.out.println(fornecedor);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

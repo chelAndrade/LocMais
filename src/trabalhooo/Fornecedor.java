@@ -17,6 +17,7 @@ public class Fornecedor {
     private String endereco;
     private String telefone;
     private String cnpj;
+    private static int numeroDeFornecedores = 0;
    
    
     public Fornecedor(){}
@@ -84,6 +85,7 @@ public class Fornecedor {
         this.cnpj = cnpj;
         this.telefone = telefone;
         this.endereco = endereco;
+        numeroDeFornecedores ++;
         
     }
     
@@ -108,6 +110,10 @@ public class Fornecedor {
         }catch (Exception e){
             throw new RuntimeException(e);
         }
+    }
+    @Override
+    public String toString() {
+        return " Nome do fornecedor: "+ nomeFornecedor + "\n Endereço: "+endereco+"\n CNPJ: "+cnpj+"\n telefone: "+telefone + "\n Quantidade de fornecedores: "+numeroDeFornecedores;
     }
 }
     
