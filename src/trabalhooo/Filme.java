@@ -16,12 +16,12 @@ import java.util.Scanner;
 public class Filme {
      String titulo;
      String anoLancamento;
-     String classificacaoIndicativa;
+     int classificacaoIndicativa;
      int quantDisponivel;
      float valorAlocacao;
      
      //Construtor da classe
-     public Filme(String titulo,String anoLancamento,String classificacaoIndicativa,int quantDisponivel,float valorAlocacao){
+     public Filme(String titulo,String anoLancamento,int classificacaoIndicativa,int quantDisponivel,float valorAlocacao){
          this.titulo = titulo;
          this.anoLancamento = anoLancamento;
          this.classificacaoIndicativa = classificacaoIndicativa;
@@ -59,14 +59,14 @@ public class Filme {
     /**
      * @return the classificacaoIndicativa
      */
-    public String getClassificacaoIndicativa() {
+    public int getClassificacaoIndicativa() {
         return classificacaoIndicativa;
     }
 
     /**
      * @param classificacaoIndicativa the classificacaoIndicativa to set
      */
-    public void setClassificacaoIndicativa(String classificacaoIndicativa) {
+    public void setClassificacaoIndicativa(int classificacaoIndicativa) {
         this.classificacaoIndicativa = classificacaoIndicativa;
     }
 
@@ -103,7 +103,7 @@ public class Filme {
         Scanner teclado = new Scanner(System.in);
         String titulo;
         String ano;
-        String classificacaoIndicativa;
+        int classificacaoIndicativa;
         int quantDisponivel;
         float valorAlocacao;
         
@@ -112,7 +112,7 @@ public class Filme {
         System.out.print("Digite o ano de lancamento: ");
         ano = teclado.nextLine();
         System.out.print("Digite a classificacao indicativa: ");
-        classificacaoIndicativa = teclado.nextLine();
+        classificacaoIndicativa = teclado.nextInt();
         System.out.print("Digite a quantidade disponivel: ");
         quantDisponivel = teclado.nextInt();
         System.out.print("Digite o valor de alocação: ");

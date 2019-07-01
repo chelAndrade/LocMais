@@ -90,7 +90,7 @@ public class Locacao {
             for (int j = 0; j < filmes.size(); j++) {
                 if (filmes.get(j).titulo.equals(nomeFilmes.get(i))) {
                     if (filmes.get(j).quantDisponivel > 0) {
-                        if (filmes.get(j).classificacaoIndicativa > clienteSelecionado.idade) {
+                        if (filmes.get(j).classificacaoIndicativa <= clienteSelecionado.idade) {
                             filmesSelecionados.add(filmes.get(j));
                             valorTotal = valorTotal + filmes.get(j).valorAlocacao;
                             filmes.get(j).quantDisponivel--;
