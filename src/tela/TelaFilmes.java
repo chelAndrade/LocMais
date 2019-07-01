@@ -5,6 +5,8 @@
  */
 package tela;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -15,7 +17,8 @@ import trabalhooo.Filme;
  * @author miche
  */
 public class TelaFilmes extends javax.swing.JFrame {
-
+    private List<Filme> listaDeFilmes = new ArrayList<>();
+    private int quantDisponivel = 0;
     /**
      * Creates new form TelaFilmes
      */
@@ -55,14 +58,13 @@ public class TelaFilmes extends javax.swing.JFrame {
 
         label2.setText("Ano Lancamento");
 
-        jTextField2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         label3.setText("Classificacao Indicativa");
 
         label4.setText("Quantidade Disponivel");
 
-        jTextField4.setEditable(false);
-        jTextField4.setEnabled(false);
+        jTextField4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         label5.setText("Valor Alocacao");
 
@@ -172,13 +174,20 @@ public class TelaFilmes extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
         
         
-        Filme cadastroFilme = new Filme(){
+            try{
             String titulo = jTextField1.getText();
-            String anoLancemento = jTextField2.getText();
-            String classificacao = jTextField3.getText();
-            String quantDisponivel = jTextField4.getText();
-            String valorAlocacao = jTextField5.getText();
-            
+            String anoLancamento = jTextField2.getText();
+            int classificacao = Integer.parseInt(jTextField3.getText());
+            quantDisponivel = Integer.parseInt(jTextField4.getText());;
+            float valorAlocacao = Float.parseFloat(jTextField5.getText());
+            Filme cadastroFilme = new Filme(titulo,anoLancamento,classificacao,quantDisponivel,valorAlocacao);
+            listaDeFilmes.add(cadastroFilme);
+            System.out.println(cadastroFilme);
+            }catch(NumberFormatException ex) {
+            //cairá aqui se a string não for um valor 
+            //que possa ser convertido em inteiro
+                System.out.println("Verifique os valores digitados");
+            }
              /*try {
               int quantDisponivel =  Integer.parseInt(this.quantDisponivel);
               
@@ -187,7 +196,7 @@ public class TelaFilmes extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Digite a quantidade e o valor  corretamente.");
         }  */         
             
-        };
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

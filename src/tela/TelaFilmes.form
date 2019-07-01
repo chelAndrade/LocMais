@@ -122,7 +122,7 @@
     <Component class="java.awt.TextField" name="jTextField2">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Texto"/>
+          <Color id="Default Cursor"/>
         </Property>
       </Properties>
     </Component>
@@ -140,8 +140,9 @@
     </Component>
     <Component class="java.awt.TextField" name="jTextField4">
       <Properties>
-        <Property name="editable" type="boolean" value="false"/>
-        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Text Cursor"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="label5">

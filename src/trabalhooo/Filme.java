@@ -19,7 +19,7 @@ public class Filme {
      int classificacaoIndicativa;
      int quantDisponivel;
      float valorAlocacao;
-     
+     static int numeroDeTitulos;
      public Filme(){}
      
      //Construtor da classe
@@ -29,6 +29,7 @@ public class Filme {
          this.classificacaoIndicativa = classificacaoIndicativa;
          this.quantDisponivel = quantDisponivel;
          this.valorAlocacao = valorAlocacao;
+         this.numeroDeTitulos ++;
      }
     /**
      * @return the titulo
@@ -123,6 +124,10 @@ public class Filme {
         filme = new Filme(titulo,ano,classificacaoIndicativa,quantDisponivel,valorAlocacao);
         
         return filme;
+    }
+    @Override
+    public String toString() {
+        return "Filme{\n" + " nome = " + this.titulo +  "\n quantidade disponivel = " + this.quantDisponivel + "\n Preço para alugar R$"+ this.valorAlocacao + "\n Classificacao indicativa: " + this.classificacaoIndicativa + " anos" + "\n Numero de titulos = " + numeroDeTitulos+'}';
     }
 }
  
