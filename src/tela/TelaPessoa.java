@@ -7,6 +7,7 @@ package tela;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import trabalhooo.Pessoa;
 
@@ -66,6 +67,11 @@ public class TelaPessoa extends javax.swing.JFrame {
         });
 
         jButton2.setText("Atualizar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Sair");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -142,13 +148,26 @@ public class TelaPessoa extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        /*Pessoa pessoa = new Pessoa() {
+         String cadastro = jButton1.getText();
+        //Cadastro cadastro = new Cadastro(cadastro);              
+        JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
+        
+        Pessoa cadPessoa = new Pessoa() {
             String nome = jTextField1.getText();
             String cpf = jTextField2.getText();
             String endereco = jTextField3.getText();
             String telefone = jTextField4.getText();
             String idade =  jTextField5.getText();
-        };*/
+            
+        /*try {
+              int idade =  Integer.parseInt(this.idade) ;
+              
+              //cadastroPessoa.Pessoa(nome, (int) idade, cpf,endereco,telefone);
+              dispose();
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Digite idade corretamente.");
+        }*/                
+        };
          
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -156,6 +175,13 @@ public class TelaPessoa extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+         String atualizar = jButton2.getText();
+        //Cadastro cadastro = new Cadastro(cadastro);              
+        JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

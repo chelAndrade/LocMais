@@ -9,19 +9,39 @@ package trabalhooo;
  *
  * @author miche
  */
-public abstract class Pessoa{
+public abstract class Pessoa  {
+    protected int idPessoa;
     protected String nome;
     protected String cpf;
     protected String endereco;
     protected String telefone;
     protected int idade;
-    public Pessoa(String nome, String cpf, String endereco, String telefone, int idade){
+    
+    public Pessoa(){}
+    
+   public  Pessoa(String nome, String cpf, String endereco, String telefone, int idade){
         this.nome = nome;
         this.cpf = cpf;
         this.endereco = endereco;
         this.telefone = telefone;
-        this.idade = idade;
+        this.idade = idade;  
+   
+   
+   }
+    /**
+     * @return the idPessoa
+     */
+    public int getIdPessoa() {
+        return idPessoa;
     }
+
+    /**
+     * @param idPessoa the idPessoa to set
+     */
+    public void setIdPessoa(int idPessoa) {
+        this.idPessoa = idPessoa;
+    }
+
     /**
      * @return the nome
      */
@@ -91,6 +111,4 @@ public abstract class Pessoa{
     public void setIdade(int idade) {
         this.idade = idade;
     }
- 
-
 }
