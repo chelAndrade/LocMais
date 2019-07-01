@@ -20,6 +20,8 @@ public class Filme {
      int quantDisponivel;
      float valorAlocacao;
      
+     public Filme(){}
+     
      //Construtor da classe
      public Filme(String titulo,String anoLancamento,int classificacaoIndicativa,int quantDisponivel,float valorAlocacao){
          this.titulo = titulo;

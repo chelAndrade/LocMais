@@ -10,10 +10,10 @@ package trabalhooo;
  * @author miche
  */
 public class FilmeAdulto extends Filme{
-     private String classificacaoIndicativa;
+     private int classificacaoIndicativa;
 
 
-    public FilmeAdulto(String titulo, String anoLancamento, String classificacaoIndicativa, int quantDisponivel, float valorAlocacao) {
+    public FilmeAdulto(String titulo, String anoLancamento,int classificacaoIndicativa, int quantDisponivel, float valorAlocacao) {
         super(titulo, anoLancamento, classificacaoIndicativa, quantDisponivel, valorAlocacao);
 
     }
@@ -21,19 +21,19 @@ public class FilmeAdulto extends Filme{
       /**
      * @return the classificacaoIndicativa
      */
-    public String getClassificacaoIndicativa() {
+    public int getClassificacaoIndicativa() {
         return classificacaoIndicativa;
     }
 
     /**
      * @param classificacaoIndicativa the classificacaoIndicativa to set
      */
-    public void setClassificacaoIndicativa(String classificacaoIndicativa) {
+    public void setClassificacaoIndicativa(int classificacaoIndicativa) {
         this.classificacaoIndicativa = classificacaoIndicativa;
     }
     
      public void classificarIdade(String idade){
-          if (this.classificacaoIndicativa == "18") {
+          if (this.classificacaoIndicativa == 18) {
                System.out.println("O usuario so pode alugar o filme mediante apresentacao de documento");
             }
         

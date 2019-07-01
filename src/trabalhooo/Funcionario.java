@@ -16,6 +16,9 @@ public class Funcionario extends Pessoa{
     private String cargo;
     private String loginUsuario;
     
+    public Funcionario(){}
+    
+    
     public Funcionario(float salario,String cargo){
         System.out.println("Digite a senha do funcionario");
         Scanner teclado = new Scanner(System.in);
