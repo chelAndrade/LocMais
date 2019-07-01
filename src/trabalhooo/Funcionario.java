@@ -19,12 +19,18 @@ public class Funcionario extends Pessoa{
     public Funcionario(){}
     
     
-    public Funcionario(float salario,String cargo){
+    public Funcionario(float salario,String cargo,String loginUsuario,String nome,String cpf,String endereco,String telefone,boolean tipo){
         System.out.println("Digite a senha do funcionario");
         Scanner teclado = new Scanner(System.in);
-        this.loginUsuario = teclado.nextLine();
+        this.loginUsuario = loginUsuario;
         this.salario = salario;
         this.cargo = cargo;
+        super.nome = nome;
+        super.endereco = endereco;
+        super.idade = idade;
+        super.tipo = tipo;
+        super.telefone = telefone;
+        super.cpf = cpf;
         
     }
 
@@ -69,5 +75,7 @@ public class Funcionario extends Pessoa{
     public void setLoginUsuario(String loginUsuario) {
         this.loginUsuario = loginUsuario;
     }
-
+    public String toString(){
+       return "Cargo = " + cargo + "\nNome = " + super.nome + "\nCPF = " + super.cpf + "\nLoginUsuario = " + loginUsuario + "\nsalario = "+salario +"\ntelefone = "+super.telefone; 
+    }
 }

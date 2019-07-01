@@ -162,7 +162,11 @@ public class TelaFilmes extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         String atualiza = jButton2.getText();
+         jTextField1.setText(" ");
+         jTextField2.setText(" ");
+         jTextField3.setText(" ");
+         jTextField4.setText(" ");
+         jTextField5.setText(" ");
         //Cadastro cadastro = new Cadastro(cadastro);              
         JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -181,7 +185,7 @@ public class TelaFilmes extends javax.swing.JFrame {
             quantDisponivel = Integer.parseInt(jTextField4.getText());;
             float valorAlocacao = Float.parseFloat(jTextField5.getText());
             Filme cadastroFilme = new Filme(titulo,anoLancamento,classificacao,quantDisponivel,valorAlocacao);
-            listaDeFilmes.add(cadastroFilme);
+            getListaDeFilmes().add(cadastroFilme);
             System.out.println(cadastroFilme);
             }catch(NumberFormatException ex) {
             //cairá aqui se a string não for um valor 
@@ -260,4 +264,11 @@ public class TelaFilmes extends javax.swing.JFrame {
     private java.awt.Label label5;
     private java.awt.TextField textField6;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the listaDeFilmes
+     */
+    public List<Filme> getListaDeFilmes() {
+        return listaDeFilmes;
+    }
 }

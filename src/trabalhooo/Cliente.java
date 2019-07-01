@@ -38,6 +38,8 @@ public class Cliente extends Pessoa{
         
         return new Cliente(nome, cpf, endereco, telefone, idade);
     }
-
-    
+    public String toString(){
+        return "nome = " + super.nome +"\ncpf = " + super.cpf;
+    }
 }
+    

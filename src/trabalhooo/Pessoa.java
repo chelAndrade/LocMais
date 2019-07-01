@@ -10,12 +10,12 @@ package trabalhooo;
  * @author miche
  */
 public abstract class Pessoa  {
-    protected int idPessoa;
     protected String nome;
     protected String cpf;
     protected String endereco;
     protected String telefone;
     protected int idade;
+    protected boolean tipo;//0 funcionario 1 cliente
     
     public Pessoa(){}
     
@@ -31,16 +31,6 @@ public abstract class Pessoa  {
     /**
      * @return the idPessoa
      */
-    public int getIdPessoa() {
-        return idPessoa;
-    }
-
-    /**
-     * @param idPessoa the idPessoa to set
-     */
-    public void setIdPessoa(int idPessoa) {
-        this.idPessoa = idPessoa;
-    }
 
     /**
      * @return the nome

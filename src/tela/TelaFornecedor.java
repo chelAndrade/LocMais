@@ -20,7 +20,7 @@ import trabalhooo.Funcionario;
  * @author miche
  */
 public class TelaFornecedor extends javax.swing.JFrame {
-    List<Fornecedor> listaDeFornecedores = new ArrayList<>();
+    private List<Fornecedor> listaDeFornecedores = new ArrayList<>();
     /**
      * Creates new form Fornecedor
      */
@@ -156,7 +156,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
             String telefone = jTextField3.getText();
             String cnpj = jTextField4.getText();
             Fornecedor fornecedor = new Fornecedor(nomeFornecedor, cnpj, telefone, endereco);
-            listaDeFornecedores.add(fornecedor);
+            getListaDeFornecedores().add(fornecedor);
             System.out.println(fornecedor);
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -174,7 +174,10 @@ public class TelaFornecedor extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         String atualizar = jButton2.getText();
+         jTextField1.setText(" ");
+         jTextField2.setText(" ");
+         jTextField3.setText(" ");
+         jTextField4.setText(" ");
         //Cadastro cadastro = new Cadastro(cadastro);              
         JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -237,4 +240,11 @@ public class TelaFornecedor extends javax.swing.JFrame {
     private java.awt.Label label3;
     private java.awt.Label label4;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the listaDeFornecedores
+     */
+    public List<Fornecedor> getListaDeFornecedores() {
+        return listaDeFornecedores;
+    }
 }

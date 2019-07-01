@@ -10,13 +10,16 @@ import javax.swing.JOptionPane;
 //import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import trabalhooo.Pessoa;
+import trabalhooo.Cliente;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author miche
  */
 public class TelaPessoa extends javax.swing.JFrame {
-
+    private List<Cliente> listaDeClientes = new ArrayList<>();
     /**
      * Creates new form TelaPessoa
      */
@@ -158,13 +161,15 @@ public class TelaPessoa extends javax.swing.JFrame {
         //Cadastro cadastro = new Cadastro(cadastro);              
         JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
         
-        Pessoa cadPessoa = new Pessoa() {
+        
             String nome = jTextField1.getText();
             String cpf = jTextField2.getText();
             String endereco = jTextField3.getText();
             String telefone = jTextField4.getText();
-            String idade =  jTextField5.getText();
-            
+            int idade =  Integer.parseInt(jTextField5.getText());
+            Cliente cliente = new Cliente(nome,cpf,endereco,telefone,idade);
+            System.out.println(cliente.toString());
+            getListaDeClientes().add(cliente);
         /*try {
               int idade =  Integer.parseInt(this.idade) ;
               
@@ -173,7 +178,7 @@ public class TelaPessoa extends javax.swing.JFrame {
         }catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Digite idade corretamente.");
         }*/                
-        };
+        
          
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -184,7 +189,11 @@ public class TelaPessoa extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         String atualizar = jButton2.getText();
+         jTextField1.setText(" ");
+         jTextField2.setText(" ");
+         jTextField3.setText(" ");
+         jTextField4.setText(" ");
+         jTextField5.setText(" ");
         //Cadastro cadastro = new Cadastro(cadastro);              
         JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -254,4 +263,11 @@ public class TelaPessoa extends javax.swing.JFrame {
     private java.awt.Label label4;
     private java.awt.Label label5;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the listaDeClientes
+     */
+    public List<Cliente> getListaDeClientes() {
+        return listaDeClientes;
+    }
 }
