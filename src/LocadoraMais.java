@@ -2,7 +2,6 @@
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import Acao.AcaoBotao;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -88,7 +87,6 @@ public class LocadoraMais extends javax.swing.JFrame {
         JButton botao1 = new JButton("Cadastar Fornecedor");
         
         botao1.setToolTipText("Clique aqui para salvar");
-        botao1.addActionListener(new AcaoBotao());
         painel.add(botao1);
        
         JButton botao2 = new JButton("Cadastrar Clientes");
