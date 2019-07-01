@@ -3,7 +3,7 @@ package tela;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import trabalhooo.CadastroFuncionario;
+
 import trabalhooo.Fornecedor;
 import trabalhooo.Funcionario;
 

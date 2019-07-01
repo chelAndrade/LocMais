@@ -3,7 +3,6 @@ package tela;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import trabalhooo.CadastroFuncionario;
 import trabalhooo.Funcionario;
 
 /*
@@ -135,7 +134,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
         //CadastroFuncionario cadastro = new CadastroFuncionario(endereco);              
         JOptionPane.showMessageDialog(null, endereco);*/
         
-       Funcionario cadFuncionario = new Funcionario(){
+       Funcionario funcionario = new Funcionario(){
            String salario = jTextField5.getText();
            String cargo = jTextField6.getText();
            String loginUsario = jTextField7.getText();
