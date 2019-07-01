@@ -51,6 +51,12 @@ public class TelaPessoa extends javax.swing.JFrame {
 
         label1.setText("Nome");
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         label2.setText("Cpf");
 
         label3.setText("Endereco");
@@ -182,6 +188,10 @@ public class TelaPessoa extends javax.swing.JFrame {
         //Cadastro cadastro = new Cadastro(cadastro);              
         JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
