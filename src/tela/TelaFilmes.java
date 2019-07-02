@@ -17,7 +17,7 @@ import trabalhooo.Filme;
  * @author miche
  */
 public class TelaFilmes extends javax.swing.JFrame {
-    private List<Filme> listaDeFilmes = new ArrayList<>();
+    public static List<Filme> listaDeFilmes = new ArrayList<>();
     private int quantDisponivel = 0;
     /**
      * Creates new form TelaFilmes
@@ -47,7 +47,6 @@ public class TelaFilmes extends javax.swing.JFrame {
         label5 = new java.awt.Label();
         jTextField5 = new java.awt.TextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         textField6.setText("textField6");
@@ -72,13 +71,6 @@ public class TelaFilmes extends javax.swing.JFrame {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Atualizar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -110,8 +102,6 @@ public class TelaFilmes extends javax.swing.JFrame {
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(65, 65, 65)
                                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(31, 31, 31))
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -147,7 +137,6 @@ public class TelaFilmes extends javax.swing.JFrame {
                 .addGap(113, 113, 113)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2)
                     .addComponent(jButton3))
                 .addContainerGap(93, Short.MAX_VALUE))
         );
@@ -159,17 +148,6 @@ public class TelaFilmes extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-         jTextField1.setText(" ");
-         jTextField2.setText(" ");
-         jTextField3.setText(" ");
-         jTextField4.setText(" ");
-         jTextField5.setText(" ");
-        //Cadastro cadastro = new Cadastro(cadastro);              
-        JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -192,6 +170,7 @@ public class TelaFilmes extends javax.swing.JFrame {
             //que possa ser convertido em inteiro
                 System.out.println("Verifique os valores digitados");
             }
+            
              /*try {
               int quantDisponivel =  Integer.parseInt(this.quantDisponivel);
               
@@ -250,7 +229,6 @@ public class TelaFilmes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private java.awt.TextField jTextField1;
     private java.awt.TextField jTextField2;
@@ -268,7 +246,7 @@ public class TelaFilmes extends javax.swing.JFrame {
     /**
      * @return the listaDeFilmes
      */
-    public List<Filme> getListaDeFilmes() {
+    public static List<Filme> getListaDeFilmes() {
         return listaDeFilmes;
     }
 }

@@ -16,6 +16,10 @@ public class Cliente extends Pessoa{
     public Cliente(String nome, String cpf, String endereco, String telefone, int idade) {
         super(nome, cpf, endereco, telefone, idade);
     }
+
+    public Cliente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public Cliente leCliente(){
         Scanner teclado = new Scanner(System.in);

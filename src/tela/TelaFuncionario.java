@@ -41,7 +41,6 @@ public class TelaFuncionario extends javax.swing.JFrame {
         jTextField5 = new java.awt.TextField();
         label6 = new java.awt.Label();
         jTextField6 = new java.awt.TextField();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
@@ -76,13 +75,6 @@ public class TelaFuncionario extends javax.swing.JFrame {
         });
 
         label6.setText("Cargo");
-
-        jButton2.setText("Atualizar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         jButton3.setText("Sair");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -124,9 +116,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(46, 46, 46)
+                        .addGap(246, 246, 246)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
@@ -189,7 +179,6 @@ public class TelaFuncionario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2)
                     .addComponent(jButton3))
                 .addGap(136, 136, 136))
         );
@@ -207,7 +196,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
         //CadastroFuncionario cadastro = new CadastroFuncionario(endereco);              
         JOptionPane.showMessageDialog(null, endereco);*/
         
-       
+           try{
            Float salario = Float.parseFloat(jTextField5.getText());
            String cargo = jTextField6.getText();
            String loginUsuario = jTextField7.getText();
@@ -219,7 +208,11 @@ public class TelaFuncionario extends javax.swing.JFrame {
            Funcionario funcionario = new Funcionario(salario,cargo,loginUsuario,nome,cpf,endereco,telefone,false);
            System.out.println(funcionario);
            getListaDeFuncionarios().add(funcionario);
-           
+           }catch(NumberFormatException ex) {
+            //cairá aqui se a string não for um valor 
+            //que possa ser convertido em inteiro ou float
+                System.out.println("Verifique os valores digitados");
+            }
            
        
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -228,20 +221,6 @@ public class TelaFuncionario extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-         jTextField1.setText(" ");
-         jTextField2.setText(" ");
-         jTextField3.setText(" ");
-         jTextField4.setText(" ");
-         jTextField5.setText(" ");
-         jTextField6.setText(" ");
-         jTextField7.setText(" ");
-         jTextField8.setText(" ");
-        //Cadastro cadastro = new Cadastro(cadastro);              
-        JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
@@ -308,7 +287,6 @@ public class TelaFuncionario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

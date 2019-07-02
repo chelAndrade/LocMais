@@ -14,12 +14,12 @@ import java.util.Scanner;
  * @author michel,Christian 
  */
 public class Filme {
-     String titulo;
+     public String titulo;
      String anoLancamento;
      int classificacaoIndicativa;
-     int quantDisponivel;
+     public int quantDisponivel;
      float valorAlocacao;
-     static int numeroDeTitulos;
+     public static int numeroDeTitulos;
      public Filme(){}
      
      //Construtor da classe

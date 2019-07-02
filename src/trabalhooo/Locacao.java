@@ -5,7 +5,6 @@
  */
 package trabalhooo;
 
-import static java.rmi.Naming.list;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,19 +18,21 @@ import java.util.Scanner;
 public class Locacao {
 
     Cliente cliente;
-    List<Filme> filmes;
+    Filme filme1;
     Date dataLocacao;
     Calendar dataDevolucao;
     float valorTotal;
+    public static int quantidadeLocacoes = 0;
 
-    public Locacao(Cliente cliente, List<Filme> filmes, float valorTotal) {
+    public Locacao(Cliente cliente, Filme filme1, float valorTotal) {
         this.cliente = cliente;
-        this.filmes = filmes;
+        this.filme1 = filme1;
         this.dataLocacao = new Date();// data atual
         this.dataDevolucao = Calendar.getInstance();
         dataDevolucao.setTime(dataLocacao);
         dataDevolucao.add(Calendar.DATE, +3);//3 dias acrescentado a data atual
         this.valorTotal = valorTotal;
+        this.quantidadeLocacoes ++;
     }
 
     /**
@@ -62,7 +63,7 @@ public class Locacao {
         this.dataDevolucao = dataDevolucao;
     }
 
-    public Locacao alugar(List<Filme> filmes, List<Cliente> clientes) {
+    /*public Locacao alugar(List<Filme> filmes, List<Cliente> clientes) {
         ArrayList<String> nomeFilmes = new ArrayList<>();
         String nomeCliente;
         Scanner teclado = new Scanner(System.in);
@@ -112,7 +113,7 @@ public class Locacao {
         } else {
             return null;
         }
-    }
+    }*/
 
     public void devolver(List<Filme> filmes, List<Cliente> clientes) {
         ArrayList<String> nomeFilmes = new ArrayList<>();
@@ -161,6 +162,13 @@ public class Locacao {
         }
         //apliacao da multa 5 reais por filme
         valorMulta = 5 * filmesSelecionados.size();
-
+        
+    }
+    @Override
+    public String toString(){
+        return "Locacao: {" + quantidadeLocacoes + "\nNome do cliente: "+ this.cliente.nome + "\nNome do filme alugado: "+ this.filme1.titulo + "\nData de Devolucao: " + dataDevolucao.getTime() + "}";
+    }
+    public String toString2(){
+        return "Devolução = "+ dataDevolucao.getTime();
     }
 }

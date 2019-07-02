@@ -19,7 +19,7 @@ import java.util.List;
  * @author miche
  */
 public class TelaPessoa extends javax.swing.JFrame {
-    private List<Cliente> listaDeClientes = new ArrayList<>();
+    public static List<Cliente> listaDeClientes = new ArrayList<>();
     /**
      * Creates new form TelaPessoa
      */
@@ -47,7 +47,6 @@ public class TelaPessoa extends javax.swing.JFrame {
         label5 = new java.awt.Label();
         jTextField5 = new java.awt.TextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,13 +71,6 @@ public class TelaPessoa extends javax.swing.JFrame {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Atualizar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -115,9 +107,7 @@ public class TelaPessoa extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(139, 139, 139)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
+                        .addGap(286, 286, 286)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(318, Short.MAX_VALUE))
         );
@@ -147,7 +137,6 @@ public class TelaPessoa extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2)
                     .addComponent(jButton3))
                 .addGap(67, 67, 67))
         );
@@ -186,17 +175,6 @@ public class TelaPessoa extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-         jTextField1.setText(" ");
-         jTextField2.setText(" ");
-         jTextField3.setText(" ");
-         jTextField4.setText(" ");
-         jTextField5.setText(" ");
-        //Cadastro cadastro = new Cadastro(cadastro);              
-        JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -250,7 +228,6 @@ public class TelaPessoa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private java.awt.TextField jTextField1;
     private java.awt.TextField jTextField2;
@@ -267,7 +244,7 @@ public class TelaPessoa extends javax.swing.JFrame {
     /**
      * @return the listaDeClientes
      */
-    public List<Cliente> getListaDeClientes() {
+    public static List<Cliente> getListaDeClientes() {
         return listaDeClientes;
     }
 }
