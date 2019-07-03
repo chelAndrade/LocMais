@@ -17,7 +17,7 @@ import trabalhooo.Filme;
  * @author miche
  */
 public class TelaFilmes extends javax.swing.JFrame {
-    public static List<Filme> listaDeFilmes = new ArrayList<>();
+    private List<Filme> listaDeFilmes = new ArrayList<>();
     private int quantDisponivel = 0;
     /**
      * Creates new form TelaFilmes
@@ -47,6 +47,7 @@ public class TelaFilmes extends javax.swing.JFrame {
         label5 = new java.awt.Label();
         jTextField5 = new java.awt.TextField();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         textField6.setText("textField6");
@@ -63,7 +64,7 @@ public class TelaFilmes extends javax.swing.JFrame {
 
         label4.setText("Quantidade Disponivel");
 
-        jTextField4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         label5.setText("Valor Alocacao");
 
@@ -71,6 +72,13 @@ public class TelaFilmes extends javax.swing.JFrame {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Atualizar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -97,15 +105,17 @@ public class TelaFilmes extends javax.swing.JFrame {
                             .addComponent(label2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(31, 31, 31))
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(114, 114, 114)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(65, 65, 65)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -137,6 +147,7 @@ public class TelaFilmes extends javax.swing.JFrame {
                 .addGap(113, 113, 113)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
+                    .addComponent(jButton2)
                     .addComponent(jButton3))
                 .addContainerGap(93, Short.MAX_VALUE))
         );
@@ -148,6 +159,13 @@ public class TelaFilmes extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+         String atualiza = jButton2.getText();
+        //Cadastro cadastro = new Cadastro(cadastro);              
+        JOptionPane.showMessageDialog(null, "Atualizado com sucesso");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -163,14 +181,13 @@ public class TelaFilmes extends javax.swing.JFrame {
             quantDisponivel = Integer.parseInt(jTextField4.getText());;
             float valorAlocacao = Float.parseFloat(jTextField5.getText());
             Filme cadastroFilme = new Filme(titulo,anoLancamento,classificacao,quantDisponivel,valorAlocacao);
-            getListaDeFilmes().add(cadastroFilme);
+            listaDeFilmes.add(cadastroFilme);
             System.out.println(cadastroFilme);
             }catch(NumberFormatException ex) {
             //cairá aqui se a string não for um valor 
             //que possa ser convertido em inteiro
                 System.out.println("Verifique os valores digitados");
             }
-            
              /*try {
               int quantDisponivel =  Integer.parseInt(this.quantDisponivel);
               
@@ -229,6 +246,7 @@ public class TelaFilmes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private java.awt.TextField jTextField1;
     private java.awt.TextField jTextField2;
@@ -242,11 +260,4 @@ public class TelaFilmes extends javax.swing.JFrame {
     private java.awt.Label label5;
     private java.awt.TextField textField6;
     // End of variables declaration//GEN-END:variables
-
-    /**
-     * @return the listaDeFilmes
-     */
-    public static List<Filme> getListaDeFilmes() {
-        return listaDeFilmes;
-    }
 }
